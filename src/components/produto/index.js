@@ -22,8 +22,11 @@ export default function Produto(props) {
                 <p className="nome-prod">
                     {props.nome}
                 </p>
-                <p className="precofinal-prod">
+                <p className="preco-prod">
                     R$ {props.preco}
+                </p>
+                <p className="precofinal-prod">
+                    R$ {props.precofinal}
                 </p>
             </figcaption>
         </figure>

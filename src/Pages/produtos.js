@@ -26,7 +26,7 @@ export default function Produtos() {
         <Container>
             <Row>
                 {Produtos && Produtos.map(item => <Produto key={item.idproduto} imagem={item.imagem} nome={item.categoria}
-                preco={item.preco} categoria={item.descricao}/>)}
+                preco={item.preco} categoria={item.descricao} precofinal={item.precofinal}/>)}
             </Row>
         </Container>
     )
