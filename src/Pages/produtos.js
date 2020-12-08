@@ -15,7 +15,7 @@ export default function Produtos() {
 
     useEffect(() => {
         async function fetchData() {
-            const resposta = await fetch("http://localhost/projetos/amigaopet/public/api/db_connect.php?table=produto")
+            const resposta = await fetch("http://localhost/Cavaleiro-Jedi/public/api/db_connect.php?table=produto")
             const dados = await resposta.json()
             setProdutos(dados);
         }
