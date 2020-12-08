@@ -6,6 +6,7 @@ export default function Pedidos() {
         nome: "",
         endereco: "",
         fone: "",
+        nome_do_produto: "",
         valor: "",
         quantidade: "",
         preco_final: ""
@@ -34,14 +35,14 @@ export default function Pedidos() {
             body: json
         }
 
-        const resposta = await fetch("http://localhost/projetos/amigaopet/public/api/cadastro_produto.php", opcoes);
+        const resposta = await fetch("http://localhost/Cavaleiro-Jedi/public/api/cadastro_produto.php", opcoes);
             const dados = await resposta.json()
             console.log(dados);
     }
 
     return (
         <Row>
-            <div className="col-lg-6 col-md-6 mx-auto">
+            <div className="col-lg-7 col-md-7 mx-auto">
                 <Form onSubmit={controleEnvio}>
                     <h4>Fazer Pedido</h4>
                     <Form.Group>
@@ -53,8 +54,12 @@ export default function Pedidos() {
                         <Form.Control onChange={controleMudanca} type="text" id="endereco"/>
                     </Form.Group>
                     <Form.Group>
-                        <Form.Label>Telefone::</Form.Label>
+                        <Form.Label>Telefone:</Form.Label>
                         <Form.Control onChange={controleMudanca} type="text" id="fone"/>
+                    </Form.Group>
+                    <Form.Group>
+                        <Form.Label>Tipo do amigao:</Form.Label>
+                        <Form.Control onChange={controleMudanca} type="text" id="nome_do_produto"/>
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Valor:</Form.Label>
