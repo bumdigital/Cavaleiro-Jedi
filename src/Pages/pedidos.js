@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import {from, Button, Row, Form} from 'react-bootstrap';
+import { Button, Row, Form} from 'react-bootstrap';
 
 export default function Pedidos() {
     const [form, setForm] = useState({
