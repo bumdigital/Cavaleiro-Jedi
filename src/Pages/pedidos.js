@@ -22,16 +22,25 @@ export default function Pedidos() {
 
     const controleEnvio = async (evento) => {
         evento.preventDefault();
-        console.log("Subimitando");
+      
         const preco_final = parseFloat(form.valor) * parseFloat(form.quantidade);
-        console.log(preco_final);
+        
         document.getElementById("preco_final").value = `R$ ${preco_final}`;
 
-        const json = JSON.stringify(form);
+        setForm({
+            ...form,
+            preco_final: preco_final
+        })
 
+        const json = JSON.stringify(form);
         const opcoes = {
+            crossDomain: true,
+            mode: 'cors',
             method: 'POST',
-            headers: {'Content-type': 'aplication/json'},
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
             body: json
         }
 
@@ -71,10 +80,10 @@ export default function Pedidos() {
                     </Form.Group>
                     <Form.Group>
                         <Form.Label>Preço final:</Form.Label>
-                        <Form.Control onChange={controleMudanca} type="text" id="preco_final"/>
+                        <Form.Control disabled type="text" id="preco_final"/>
                     </Form.Group>
-                    <Button variant="success" type="submit"/>
-                        Cadastrar
+                    <Button variant="success" type="submit">Cadastrar</Button>
+                        
                 </Form>
             </div>
         </Row>
