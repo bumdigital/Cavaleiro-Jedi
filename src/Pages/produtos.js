@@ -7,11 +7,7 @@ export default function Produtos() {
 
     const [Produtos, setProdutos] = useState([]);
 
-    /* useEffect(async () => {
-        const resposta = await fetch("http://localhost/RecodePro-PHP%20Intermedi%C3%A1rio/db_connect.php")
-        const dados = await resposta.json();
-        setProdutos(dados);
-    }, []); */
+    
 
     useEffect(() => {
         async function fetchData() {

@@ -1,0 +1,13 @@
+.Contato-img {
+    height: 30px;
+    padding-right: 1rem;
+  }
+  
+  .Contato-link {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Contato-link a {
+    text-decoration: none;
+  }

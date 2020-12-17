@@ -6,6 +6,7 @@ import {BrowserRouter} from 'react-router-dom';
 import {Container} from 'react-bootstrap';
 
 import './app.css'
+import Footer from './components/footer';
 
 function App() {
     return (
@@ -14,11 +15,15 @@ function App() {
                 <header>
                     <Menu />
                 </header>
+                <br/><br/><br/><br/>
                 <main>
                     <Container fluid>
                         <Rotas />
                     </Container>
                 </main>
+                <footer>
+                    <Footer/>
+                </footer>
             </div>
         </BrowserRouter>
         

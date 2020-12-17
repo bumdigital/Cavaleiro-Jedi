@@ -2,13 +2,17 @@
 import { Navbar, Nav } from 'react-bootstrap';
 import {Link, withRouter} from 'react-router-dom';
 import './menu.css';
+import logo from './logo.png';
+import Image from 'react-bootstrap/Image';
 
 function BaseMenu(props) {
     const {location} = props;
     return (
         <Navbar className="navbar-dark" bg="success" expand="lg" fixed="top">
             <Navbar.Brand>
-                <Nav.Link as={Link} href="/home" to="/home" Class="text-light">AmigãoPet</Nav.Link>
+            <Link className="nav-link text-white" to='/home'>
+                  <Image className="Image-height" src={logo} fluid />
+                </Link>
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="item-menu" />    
             <Navbar.Collapse id="item-menu">
