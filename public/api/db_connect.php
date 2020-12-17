@@ -2,8 +2,8 @@
     header("Access-Control-Allow-Origin:*");
     
     $servidor = "localhost";
-    $usuario = "teste";
-    $senha = "1234";
+    $usuario = "root";
+    $senha = "";
     $banco = "amigaopet";
 
     $tabela = $_GET['table'];
