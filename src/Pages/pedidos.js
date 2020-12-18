@@ -26,7 +26,7 @@ class Produtos extends Component{
   render(){
     return(
       <Container className="py-5">
-        <h1 className="py-5 text-info text-center">Pedidos</h1>
+        <h1 className="py-5 text-success text-center">Pedidos</h1>
         <Row>
           <Col>
             <Formulario data={this.state.produtos}/>

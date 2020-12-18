@@ -29,7 +29,7 @@ class Formulario extends Component{
           <Col className="py-1" xs={12} sm={6} md={4} lg={1}>
             <Form.Control placeholder="Total" name="total" />
           </Col>
-          <Button xs={12} sm={6} md={4} lg={2} variant="info" type="submit">Finalizar</Button>
+          <Button xs={12} sm={6} md={4} lg={2} variant="success" type="submit">Enviar</Button>
       </Form.Row>
       </Form>
     );
