@@ -8,14 +8,14 @@ import ListaPedidos from './../components/lista-pedidos';
 
 class Produtos extends Component{
   state = {
-    produtos: [],
+    produto: [],
     pedidos: []
   }
   componentDidMount(){
-    axios.get(`http://localhost/Cavaleiro-Jedi/public/api/produtos.php`)
+    axios.get(`http://localhost/Cavaleiro-Jedi/public/api/.php`)
       .then(res => {
-        const produtos = res.data;
-        this.setState({ produtos });
+        const produto = res.data;
+        this.setState({ produto });
       })
     axios.get(`http://localhost/Cavaleiro-Jedi/public/api/pedidos.php`)
       .then(res => {
@@ -29,7 +29,7 @@ class Produtos extends Component{
         <h1 className="py-5 text-success text-center">Pedidos</h1>
         <Row>
           <Col>
-            <Formulario data={this.state.produtos}/>
+            <Formulario data={this.state.produto}/>
             <ListaPedidos lista={this.state.pedidos}/>
           </Col>
         </Row>

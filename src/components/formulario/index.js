@@ -18,9 +18,9 @@ class Formulario extends Component{
             <Form.Control placeholder="Telefone" name="telefone" />
           </Col>
           <Col className="py-1" xs={12} sm={6} md={4} lg={2}>
-            <Form.Control as="select" name="nome_do_produto">
+            <Form.Control as="select" name="descricao">
               <option value="0">Produto</option>
-              {this.props.data.map((produto, index) => <option key={index} value={produto.id}>{produto.nome_do_produto}</option>)}
+              {this.props.data.map((produto, index) => <option key={index} value={produto.id}>{produto.descricao}</option>)}
           </Form.Control>
         </Col>
           <Col className="py-1" xs={12} sm={6} md={4} lg={1}>
