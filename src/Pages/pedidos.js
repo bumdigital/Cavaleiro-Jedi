@@ -12,12 +12,12 @@ class Produtos extends Component{
     pedidos: []
   }
   componentDidMount(){
-    axios.get(`https://petmania.tk/api/produtos.php`)
+    axios.get(`http://localhost/Cavaleiro-Jedi/public/api/produtos.php`)
       .then(res => {
         const produtos = res.data;
         this.setState({ produtos });
       })
-    axios.get(`https://petmania.tk/api/pedidos.php`)
+    axios.get(`http://localhost/Cavaleiro-Jedi/public/api/pedidos.php`)
       .then(res => {
         const pedidos = res.data;
         this.setState({ pedidos });

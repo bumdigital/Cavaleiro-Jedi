@@ -16,7 +16,7 @@ if ($conn->connect_error) {
     die("A conexão com o banco de dados falhou. Erro: " . $conn->connect_error);
 }
 
-$sql = " SELECT * FROM produtos ";
+$sql = " SELECT * FROM produto ";
 $result = $conn->query($sql);
 echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 
