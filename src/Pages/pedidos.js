@@ -12,7 +12,7 @@ class Produtos extends Component{
     pedidos: []
   }
   componentDidMount(){
-    axios.get(`http://localhost/Cavaleiro-Jedi/public/api/.php`)
+    axios.get(`http://localhost/Cavaleiro-Jedi/public/api/produtos.php`)
       .then(res => {
         const produto = res.data;
         this.setState({ produto });
