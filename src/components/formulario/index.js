@@ -6,7 +6,7 @@ import Button from 'react-bootstrap/Button';
 class Formulario extends Component{
   render(){
     return(
-      <Form method="post" action="http://localhost/Cavaleiro-Jedi/public/api/pedidos.php">
+      <Form method="post" action="http://localhost/Cavaleiro-Jedi/public/api/pedido.php">
         <Form.Row className="d-flex justify-content-center">
           <Col className="py-1" xs={12} sm={6} md={4} lg={2}>
             <Form.Control placeholder="Cliente" name="nome_do_cliente" />

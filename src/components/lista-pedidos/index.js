@@ -15,9 +15,9 @@ class ListaPedidos extends Component{
         <tbody>
           {this.props.lista.map((item, index) => (
           <tr key={index}>
-            <td>{item.cliente}</td>
-            <td>{item.produto}</td>
-            <td>R$ {item.total},00</td>
+            <td>{item.nome_do_cliente}</td>
+            <td>{item.descricao}</td>
+            <td>R$ {item.valor_total},00</td>
             {console.log(item)}
           </tr>
           ))}

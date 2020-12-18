@@ -16,10 +16,10 @@ if ($conn->connect_error) {
     die("A conexao com o banco de dados falhou. Erro: " . $conn->connect_error);
 }
 
-$sql = "SELECT produto.descricao AS produto, pedidos.nome_do_produto AS pedidos, pedidos.valor_total
+$sql = "SELECT produto.descricao, pedidos.id_do_produto, pedidos.nome_do_cliente, pedidos.valor_total
         FROM produto
         INNER JOIN pedidos
-        ON produto.idproduto = pedidos.nome_do_produto";
+        ON produto.idproduto = pedidos.id_do_produto";
 $result = $conn->query($sql);
 echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 
