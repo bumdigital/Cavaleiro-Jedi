@@ -1,7 +1,8 @@
 import {useState, useEffect} from 'react';
 
 import Produto from '../components/produto';
-import {Container, Row} from 'react-bootstrap';
+import {Container, Row, Col} from 'react-bootstrap';
+import Categorias from './../components/categorias/index.js';
 
 export default function Produtos() {
 
@@ -21,8 +22,15 @@ export default function Produtos() {
     return (
         <Container>
             <Row>
+            <Row>
+            <Col lg={2}>
+                    <Categorias />
+                </Col>
+                </Row>
+                <Col lg={10}>
                 {Produtos && Produtos.map(item => <Produto key={item.idproduto} imagem={item.imagem} nome={item.categoria}
                 preco={item.preco} categoria={item.descricao} precofinal={item.precofinal}/>)}
+                </Col>
             </Row>
         </Container>
     )
