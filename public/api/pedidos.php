@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 $sql = "SELECT produto.descricao, pedidos.id_do_produto, pedidos.nome_do_cliente, pedidos.valor_total
         FROM produto
         INNER JOIN pedidos
-        ON produto.idproduto = pedidos.id_do_produto";
+        ON produto.idproduto";
 $result = $conn->query($sql);
 echo json_encode($result->fetch_all(MYSQLI_ASSOC));
 
